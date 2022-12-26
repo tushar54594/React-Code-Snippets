@@ -19,3 +19,5 @@ const Job = (props) => {
 };
 
 export default App;
+
+//NOTE: For integers when passed as prop, inclose it in curly braces
