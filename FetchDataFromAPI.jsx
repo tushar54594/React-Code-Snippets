@@ -16,3 +16,10 @@ function App() {
 }
 
 //Method 2: Using the Axios Library
+// install axios using:
+npm install axios
+
+Axios.get("https://catfact.ninja/fact").then((res) => {
+  console.log(res.data);
+});
+
