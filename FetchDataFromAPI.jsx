@@ -45,6 +45,7 @@ function App() {
 
 
 //Create a button and when we click on it, it displays a new fact
+//we can fetch the data directly using the function
 function App() {
 
   const [catFact, setCatFact] = useState("")
