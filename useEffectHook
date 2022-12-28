@@ -7,6 +7,8 @@
 //Inside it we paas a function which runs only when the component mounts
 Eg: When we have to get the data immediately when we make an API call
 
+
+
  useEffect(() => {
     console.log("Component Mounted");
     
@@ -15,10 +17,13 @@ Eg: When we have to get the data immediately when we make an API call
     }
   }, [])
   
+  
   //If we want to execute an action only once when the component mounts, we put an empty array
   //If we want to exextute also when a state changes, then paas that in the array
   //If we want to execute an action when the component unmounts, then we return a function and that function will execute only when the component unmounts
   
   
+  //React StrictMode
+  With StrictMode, React forces the component to mount, then unmount immediately after, and then mount again to check if useEffect is working correctly
   
   
