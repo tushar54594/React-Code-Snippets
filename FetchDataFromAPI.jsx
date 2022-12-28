@@ -19,7 +19,49 @@ function App() {
 // install axios using:
 npm install axios
 
-Axios.get("https://catfact.ninja/fact").then((res) => {
+axios.get("https://catfact.ninja/fact").then((res) => {
   console.log(res.data);
 });
+
+//We put this inside useEffect since we want to call the API only when the component mounts
+function App() {
+
+  const [catFact, setCatFact] = useState("")
+  
+  useEffect(() => {
+    axios.get("https://catfact.ninja/fact").then((res) => {
+      setCatFact(res.data.fact);
+    })  
+  }, [])
+  
+  return (
+    <div className="App"> 
+      <button>Generate Cat Fact</button>
+      <p>{catFact} </p>
+    </div>
+  );
+}
+//But we know since useEffect will render the component twice because of StrictMode so API is called twice so this is not the recommended way to do it
+
+
+//Create a button and when we click on it, it displays a new fact
+function App() {
+
+  const [catFact, setCatFact] = useState("")
+
+  const fetchCatData = () => {
+    axios.get("https://catfact.ninja/fact").then((res) => {
+      setCatFact(res.data.fact);
+    })
+  }
+  
+  return (
+    <div className="App"> 
+      <button onClick={fetchCatData}>Generate Cat Fact</button>
+      <p>{catFact} </p>
+    </div>
+  );
+}
+
+
 
