@@ -62,3 +62,7 @@ function App() {
   )
 }
 
+//NOTE
+//In React when we have an onclick and the function inside the onclick has a parameter, then we need to create a function in onClick that returns this function call
+<button onClick={() => deleteTask(task)}>Delete Task</button>
+
