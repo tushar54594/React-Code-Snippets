@@ -10,7 +10,8 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 //NAVBAR Component
 import { Link } from "react-router-dom";
-export const Navbar = () => {
+
+function Navbar(){
   return (
     <div>
       <Link to="/"> Home </Link>
@@ -20,13 +21,15 @@ export const Navbar = () => {
   );
 };
 
+export default Navbar
+
 //App.js File
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { Menu } from "./pages/Menu";
-import { Contact } from "./pages/Contact";
-import { Navbar } from "./Navbar";
+import Home from "./pages/Home";
+import Menu from "./pages/Menu";
+import Contact from "./pages/Contact";
+import Navbar from "./Navbar";
 
 function App() {
   return (
