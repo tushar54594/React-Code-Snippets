@@ -1,0 +1,24 @@
+//Lifecycle methods
+//1. Mounting
+//2.Updating
+//3.Unmounting
+
+//useEffect
+//Inside it we paas a function which runs only when the component mounts
+Eg: When we have to get the data immediately when we make an API call
+
+ useEffect(() => {
+    console.log("Component Mounted");
+    
+    return () => {
+      console.log("Component Unmounted");
+    }
+  }, [])
+  
+  //If we want to execute an action only once when the component mounts, we put an empty array
+  //If we want to exextute also when a state changes, then paas that in the array
+  //If we want to execute an action when the component unmounts, then we return a function and that function will execute only when the component unmounts
+  
+  
+  
+  
